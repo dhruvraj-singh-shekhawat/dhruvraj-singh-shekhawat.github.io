@@ -58,42 +58,89 @@
       padding:0px;
       bottom: 0;
       width: 100%;
-      ;
     }
     .tweet {
       font-family: 'Lora', Arial, sans-serif;
       color:	aquamarine;
       text-align:Left;
       width: 100%;
-      
-      
     }
+    .loaded{
+      display: none;
+    }
+  </style>
+  <style>
+    body{margin:0;background:#1C163A}
+.loader{position:absolute;top:50%;left:50%;height:60px;width:160px;margin:0;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.circles{position:absolute;left:-5px;top:0;height:60px;width:180px}
+.circles span{position:absolute;top:25px;height:12px;width:12px;border-radius:12px;background-color:#EFEFEF}
+.circles span.one{right:80px}
+.circles span.two{right:40px}
+.circles span.three{right:0px}
+.circles{-webkit-animation:animcircles 0.5s infinite linear;animation:animcircles 0.5s infinite linear}
+@-webkit-keyframes animcircles{0%{-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}100%{-webkit-transform:translate(-40px,0px);transform:translate(-40px,0px)}}
+@keyframes animcircles{0%{-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}100%{-webkit-transform:translate(-40px,0px);transform:translate(-40px,0px)}}
+.pacman{position:absolute;left:0;top:0;height:60px;width:60px}
+.pacman .eye{position:absolute;top:10px;left:30px;height:7px;width:7px;border-radius:7px;background-color:#1C163A}
+.pacman span{position:absolute;top:0;left:0;height:60px;width:60px}
+.pacman span::before{content:"";position:absolute;left:0;height:30px;width:60px;background-color:#FFFB16}
+.pacman .top::before{top:0;border-radius:60px 60px 0px 0px}
+.pacman .bottom::before{bottom:0;border-radius:0px 0px 60px 60px}
+.pacman .left::before{bottom:0;height:60px;width:30px;border-radius:60px 0px 0px 60px}
+.pacman .top{-webkit-animation:animtop 0.5s infinite;animation:animtop 0.5s infinite}
+@-webkit-keyframes animtop{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}}
+@keyframes animtop{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}}
+.pacman .bottom{-webkit-animation:animbottom 0.5s infinite;animation:animbottom 0.5s infinite}
+@-webkit-keyframes animbottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}}
+@keyframes animbottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="photo" src="https://assets.codepen.io/7458136/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1645672798&width=512" alt="Your Photo">
-    <div class="about">
-      <h1>About Me</h1>
+  <div class="preloader" id="preload">
+    <div class="loader">
+      <div class="circles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </div>
+      <div class="pacman">
+        <span class="top"></span>
+        <span class="bottom"></span>
+        <span class="left"></span>
+        <div class="eye"></div>
+      </div>
     </div>
-    <div class="about-box">
-      <p>Hi guys, If you're here possibly you have clicked the link on any of my Social Media profiles. Well, I am a Math-Minded coder still learning though, in free time I like cooking. If you want to connect with me you can click any of the given link below. Also, you can 📧 me at: g.dhruvrajshekhawat@gmail.com .</p>
-      <p>Here's my pinned tweet do check it out!</p>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">An important thread ahead 🧵:<br>It&#39;s true that social media can be a platform for people to express their opinions and beliefs, but it can also lead to divisive and polarizing discussions, where people can become triggered by the opinions of others. This can lead to name-calling.</p>&mdash; Dhruvraj Singh (@dhruxraj) <a href="https://twitter.com/dhruxraj/status/1617303513436127233?ref_src=twsrc%5Etfw">January 22, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      	
-    </div>
-   
-    <div class="social-links">
-      <a href="https://twitter.com/dhruxraj"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025545.png" alt="Twitter"></a>
-      <a href="https://www.instagram.com/dhruxraj/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111336.png" alt="Instagram"></a>
-      <a href="https://github.com/dhruvraj-singh-shekhawat"><img src="https://cdn-icons-png.flaticon.com/512/536/536452.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/dhruxraj"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938044.png" alt="LinkedIn"></a>
-    </div>
+  </div>
+  <div class="loaded">
+    <div class="container">
+      <img class="photo" src="https://assets.codepen.io/7458136/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1645672798&width=512" alt="Your Photo">
+      <div class="about">
+        <h1>About Me</h1>
+      </div>
+        <div class="about-box">
+          <p>Hi guys, If you're here possibly you have clicked the link on any of my Social Media profiles. Well, I am a Math-Minded coder still learning though, in free time I like cooking. If you want to connect with me you can click any of the given link below. Also, you can 📧 me at: g.dhruvrajshekhawat@gmail.com .</p>
+          <p>Here's my pinned tweet do check it out!</p>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">An important thread ahead 🧵:<br>It&#39;s true that social media can be a platform for people to express their opinions and beliefs, but it can also lead to divisive and polarizing discussions, where people can become triggered by the opinions of others. This can lead to name-calling.</p>&mdash; Dhruvraj Singh (@dhruxraj) <a href="https://twitter.com/dhruxraj/status/1617303513436127233?ref_src=twsrc%5Etfw">January 22, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>	
+        </div>
+      <div class="social-links">
+        <a href="https://twitter.com/dhruxraj"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025545.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/dhruxraj/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111336.png" alt="Instagram"></a>
+        <a href="https://github.com/dhruvraj-singh-shekhawat"><img src="https://cdn-icons-png.flaticon.com/512/536/536452.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/dhruxraj"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938044.png" alt="LinkedIn"></a>
+      </div>
      
     
-    <footer class="footer">
-    <p>Made with 💗 Dhruvraj Singh</p>
+      <footer class="footer">
+      <p>Made with 💗 Dhruvraj Singh</p>
 
+    </div>
   </div>
+
+  <script>
+        window.onload = function(){
+        document.querySelector(".preloader").style.display = "none";
+        document.querySelector(".loaded").style.display = "inline";
+    }
+    </script>
 </body>
 </html>
