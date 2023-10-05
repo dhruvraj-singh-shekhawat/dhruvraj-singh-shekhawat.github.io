@@ -5,6 +5,7 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+  <link href="https://unpkg.com/kursor/dist/kursor.css" rel="stylesheet">
   <style>
     /* CSS for styling the website */
     body {
@@ -96,6 +97,8 @@
   </style>
 </head>
 <body>
+  <div id="app">
+
   <div class="preloader" id="preload">
     <div class="loader">
       <div class="circles">
@@ -135,12 +138,19 @@
 
     </div>
   </div>
-
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
   <script>
+    new kursor({
+      type: 1,
+      removeDefaultCursor: true,
+      color: "#FFFFFF"
+    });
         window.onload = function(){
         document.querySelector(".preloader").style.display = "none";
         document.querySelector(".loaded").style.display = "inline";
     }
+        
     </script>
 </body>
 </html>
