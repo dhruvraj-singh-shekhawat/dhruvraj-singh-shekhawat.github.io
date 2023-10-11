@@ -13,20 +13,13 @@
       font-family: 'Lobster', Arial, sans-serif;
       color: salmon;
     }
-    .container {
-      width: 80%;
-      margin: 0 auto;
-    }
-    .photo {
-      display: block;
-      margin: 0 auto;
-      margin-top: 20px;
-      width: 20%;
-      border-radius:45%;
-    }
+    
+
     .about {
-   text-align: center;
-   margin:auto;
+   text-align: left;
+   margin-left: 15px;
+   margin-bottom: 5px;
+   margin-top: 30px;
    width: 100%;
    text-transform: none;
    background-image: linear-gradient(
@@ -36,6 +29,7 @@
     #ff1361 67%,
     #fbff00 100%
   );
+
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -54,26 +48,21 @@
     background-position: 200% center;
   }
 }
-    
-    .about-box {
-      font-family: 'Oswald', Arial, sans-serif;
-      background-color: darkslategray;
-      text-align: center;
-      padding: 50px;
-      border: 3px solid tan;
-      color:plum;
-      font-size:22px;
-      border-radius: 20px;
-      webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
+   .about-box {
+    margin-left: 20px;
+    margin-top: 30px;
+    color: white;
+    font: 700 normal 2.00em 'tahoma';
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324
+} 
+  
+
     .social-links {
       text-align: center;
       margin-top: 450px;
     }
     .social-links img {
-      width: 55px;
+      width: 30px;
       margin-right: 10px;
     }
     .footer {
@@ -86,18 +75,11 @@
       bottom: 0;
       width: 100%;
     }
-    .tweet {
-      font-family: 'Lora', Arial, sans-serif;
-      color:	aquamarine;
-      text-align:Left;
-      width: 100%;
-    }
+    
     .loaded{
       display: none;
     }
-    a:link{
-      color: #ddeaff;
-    }
+  
   </style>
   <style>
     body{margin:0;background:#1C163A}
@@ -124,6 +106,7 @@
 @-webkit-keyframes animbottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}}
 @keyframes animbottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}}
   </style>
+
 </head>
 <body>
   <div id="app">
@@ -144,15 +127,15 @@
     </div>
   </div>
   <div class="loaded">
-    <div class="container">
-      <img class="photo" src="https://assets.codepen.io/7458136/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1645672798&width=512" alt="Your Photo">
+    
       <div class="about">
         <h1>About Me</h1>
       </div>
-        <div class="about-box">
-          <p>Hi guys, If you're here possibly you have clicked the link on any of my Social Media profiles. Well, I am a Math-Minded coder still learning though, in free time I like cooking. If you want to connect with me you can click any of the given link below. Also, you can 📧 me at: <a href="mailto:g.dhruvrajshekhawat@gmail.com">g.dhruvrajshekhawat@gmail.com</a> </p>
-          
-       </div>
+      <div class="about-box">
+      <p>Hello 👋🏻  I am Dhruvraj.
+     <br> Currently a UG student @VIT Bhopal</br>      Coding | Designing | Frontend are my intrests 
+</p>
+  
       <div class="social-links">
         <a href="https://twitter.com/dhruxraj"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025545.png" alt="Twitter"></a>
         <a href="https://www.instagram.com/dhruxraj/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111336.png" alt="Instagram"></a>
@@ -162,7 +145,7 @@
      
     
       <footer class="footer">
-      <p>Made with 💗 Dhruvraj Singh</p>
+      <p>Made with 💗 by Dhruvraj</p>
 
     </div>
   </div>
